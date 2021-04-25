@@ -21,7 +21,7 @@ Route::get('/home', function () {
     return "estas en el home";
 });
 Route::get('/quiensoy', function () {
-    return "estas en quien soy";
+    return "estas en quien somos";
 });
 
 // .........................................pasar por url parametros
