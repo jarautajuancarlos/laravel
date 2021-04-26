@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Ejemplo_controller;
 use App\Http\Controllers\Ejemplo3_controller;
+use App\Http\Controllers\Paginas_controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +16,25 @@ use App\Http\Controllers\Ejemplo3_controller;
 |
 */
 //....................................codigo inicial
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // .................................enlace ejemplo_controller
-Route::get('/home', [Ejemplo_controller::class, 'home']);
+// Route::get('/home', [Ejemplo_controller::class, 'home']);
 
 // // .................................enlace ejemplo_controller
 // Route::get('/index', [Ejemplo3_controller::class, 'index']);
 
 // .................................enlace ejemplo_controller con parametros
-Route::get('/index/{id}', [Ejemplo3_controller::class, 'index']);
+// Route::get('/index/{id}', [Ejemplo3_controller::class, 'index']);
+
+// ........................................ejemplo controller paginas sitio
+Route::get('/', [Paginas_controller::class, 'index']);
+Route::get('/index', [Paginas_controller::class, 'index']);
+Route::get('/quienesSomos', [Paginas_controller::class, 'quienesSomos']);
+Route::get('/dondeEstamos', [Paginas_controller::class, 'dondeEstamos']);
+Route::get('/foro', [Paginas_controller::class, 'foro']);
 
 //..................................... empezamos a probar
 // Route::get('/', function () {
