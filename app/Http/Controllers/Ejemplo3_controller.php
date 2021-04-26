@@ -13,10 +13,9 @@ class Ejemplo3_controller extends Controller
      */
 
      // .............................ejemplo controlador con parametros
-    public function index($id)
+    public function index()
     {
-        return "Estás en la pagina de inicio del sitio y el valor pasado
-        por parametros es: " . $id ;
+        return "Estás en la pagina de inicio del sitio" ;
     }
 
     /**
@@ -26,7 +25,7 @@ class Ejemplo3_controller extends Controller
      */
     public function create()
     {
-        //
+      return "Estás en el create";
     }
 
     /**
@@ -59,7 +58,7 @@ class Ejemplo3_controller extends Controller
      */
     public function edit($id)
     {
-        //
+        return "estas accediendo al metodo edit con el parametro " . $id;
     }
 
     /**

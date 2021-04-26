@@ -15,28 +15,31 @@ use App\Http\Controllers\Paginas_controller;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//....................................codigo inicial
+//...............................................................codigo inicial
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-// .................................enlace ejemplo_controller
+// ....................................................enlace ejemplo_controller
 // Route::get('/home', [Ejemplo_controller::class, 'home']);
 
-// // .................................enlace ejemplo_controller
+// // .................................................enlace ejemplo_controller
 // Route::get('/index', [Ejemplo3_controller::class, 'index']);
 
-// .................................enlace ejemplo_controller con parametros
+// ......................................enlace ejemplo_controller con parametros
 // Route::get('/index/{id}', [Ejemplo3_controller::class, 'index']);
 
-// ........................................ejemplo controller paginas sitio
-Route::get('/', [Paginas_controller::class, 'index']);
-Route::get('/index', [Paginas_controller::class, 'index']);
-Route::get('/quienesSomos', [Paginas_controller::class, 'quienesSomos']);
-Route::get('/dondeEstamos', [Paginas_controller::class, 'dondeEstamos']);
-Route::get('/foro', [Paginas_controller::class, 'foro']);
+// ..............................................ejemplo controller paginas sitio
+// Route::get('/', [Paginas_controller::class, 'index']);
+// Route::get('/index', [Paginas_controller::class, 'index']);
+// Route::get('/quienesSomos', [Paginas_controller::class, 'quienesSomos']);
+// Route::get('/dondeEstamos', [Paginas_controller::class, 'dondeEstamos']);
+// Route::get('/foro', [Paginas_controller::class, 'foro']);
 
-//..................................... empezamos a probar
+//.......ejemplo para crear la estructura del sitio web desde consola de un comando
+Route::resource("posts", Ejemplo3_controller::class);
+
+//........................................................... empezamos a probar
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -47,17 +50,17 @@ Route::get('/foro', [Paginas_controller::class, 'foro']);
 //     return "estas en quien somos";
 // });
 
-// .........................................pasar por url parametros
+// .....................................................pasar por url parametros
 // Route::get('/post/{id}', function ($id) {
 //     return "Este es el post nº " . $id;
 // });
 
-// .........................................pasar por url varios parametros
+// ..............................................pasar por url varios parametros
 // Route::get('/post/{id}/{nombre}', function ($id, $nombre) {
 //     return "Este es el post nº " . $id . " creado por: " . $nombre;
 // });
 
-// ...................................pasar por url con expresiones regulares
+// ......................................pasar por url con expresiones regulares
 // Route::get('/post/{id}/{nombre}', function ($id, $nombre) {
 //     return "Este es el post nº " . $id . " creado por: " . $nombre;
 //
