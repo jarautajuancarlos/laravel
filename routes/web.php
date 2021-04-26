@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Ejemplo_controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// enlace ejemplo_controller
-Route::get('/inicio', 'Ejemplo_controller@inicio');
+// .................................enlace ejemplo_controller
+Route::get('/home', [Ejemplo_controller::class, 'home']);
 
 //..................................... empezamos a probar
 // Route::get('/', function () {

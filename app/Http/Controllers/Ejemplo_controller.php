@@ -10,7 +10,7 @@ namespace App\Http\Controllers;
 // use Illuminate\Routing\Controller as BaseController;
 
 class Ejemplo_controller extends Controller{
-    public function inicio(){
+    public function home(){
       return "Estás en el inicio del sitio";
     }
 }
