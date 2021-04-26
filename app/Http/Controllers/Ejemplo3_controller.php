@@ -11,9 +11,12 @@ class Ejemplo3_controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+     // .............................ejemplo controlador con parametros
+    public function index($id)
     {
-        return "Estás en la pagina de inicio del sitio";
+        return "Estás en la pagina de inicio del sitio y el valor pasado
+        por parametros es: " . $id ;
     }
 
     /**

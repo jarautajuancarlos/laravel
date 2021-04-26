@@ -22,8 +22,11 @@ Route::get('/', function () {
 // .................................enlace ejemplo_controller
 Route::get('/home', [Ejemplo_controller::class, 'home']);
 
-// .................................enlace ejemplo_controller
-Route::get('/index', [Ejemplo3_controller::class, 'index']);
+// // .................................enlace ejemplo_controller
+// Route::get('/index', [Ejemplo3_controller::class, 'index']);
+
+// .................................enlace ejemplo_controller con parametros
+Route::get('/index/{id}', [Ejemplo3_controller::class, 'index']);
 
 //..................................... empezamos a probar
 // Route::get('/', function () {
