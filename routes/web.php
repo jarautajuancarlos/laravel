@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Ejemplo_controller;
+use App\Http\Controllers\Ejemplo3_controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,9 @@ Route::get('/', function () {
 
 // .................................enlace ejemplo_controller
 Route::get('/home', [Ejemplo_controller::class, 'home']);
+
+// .................................enlace ejemplo_controller
+Route::get('/index', [Ejemplo3_controller::class, 'index']);
 
 //..................................... empezamos a probar
 // Route::get('/', function () {
